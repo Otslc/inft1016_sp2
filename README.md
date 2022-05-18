@@ -10,7 +10,7 @@ This is a paragraph. Text goes here.
 
 This is another paragraph. 
 
-#### This is a small heading. 
+### This is a small heading. 
 
 This is another paragraph.
 
@@ -42,20 +42,31 @@ Here's an ordered list, with:
   - Item three-A
   - Item three-B
 
-> This is a block quote. It should be in block quotes!
+`This is a block quote. It should be in block quotes!`
 
 # This is a large heading. 
 
-Inline code: make this word inline. 
+> Inline code: make this word inline. 
 
 # This is a large heading. 
 
 `Format this text as code.`
 
-`def foo():`
-    `if not bar:`
-        `return True`
+```
+def foo():
+    if not bar:
+        return True
+```
 
 ![This is an image](https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Kismet-IMG_6007-black.jpg/800px-Kismet-IMG_6007-black.jpg)
 
 [Here's a link!](https://commons.wikimedia.org/wiki/File:Kismet-IMG_6007-black.jpg)
+
+| Number  | Colour |  Size |
+| :------ | :----: | ----: |
+| 2       |  Blue  | Large |
+
+```
+def my_function():
+    print("Hello from a function")
+```
