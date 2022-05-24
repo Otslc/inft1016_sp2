@@ -10,7 +10,11 @@ This is a paragraph. Text goes here.
 
 This is another paragraph. 
 
+<<<<<<< HEAD
 #### This is a small heading. 
+=======
+### This is a small heading. 
+>>>>>>> 194d8af25658231c3dc8f3a84228f31d8c765442
 
 This is another paragraph.
 
@@ -42,11 +46,19 @@ Here's an ordered list, with:
   - Item three-A
   - Item three-B
 
+<<<<<<< HEAD
 > This is a block quote. It should be in block quotes!
 
 # This is a large heading. 
 
 Inline code: make this word inline. 
+=======
+`This is a block quote. It should be in block quotes!`
+
+# This is a large heading. 
+
+> Inline code: make this word inline. 
+>>>>>>> 194d8af25658231c3dc8f3a84228f31d8c765442
 
 # This is a large heading. 
 
@@ -62,14 +74,22 @@ def foo():
 
 [Here's a link!](https://commons.wikimedia.org/wiki/File:Kismet-IMG_6007-black.jpg)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 194d8af25658231c3dc8f3a84228f31d8c765442
 | Number  | Colour |  Size |
 | :------ | :----: | ----: |
 | 2       |  Blue  | Large |
 
 ```
 def my_function():
+<<<<<<< HEAD
     print("Hello from Lily Ots")
 
 ```
 
+=======
+    print("Hello from a function")
+```
+>>>>>>> 194d8af25658231c3dc8f3a84228f31d8c765442
