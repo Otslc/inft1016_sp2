@@ -71,6 +71,8 @@ def foo():
 | Number  | Colour |  Size |
 | :------ | :----: | ----: |
 | 2       |  Blue  | Large |
+| 4       |  Green  | Medium |
+| 6       |  Red  | Small |
 
 ```
 def my_function():
