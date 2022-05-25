@@ -57,7 +57,7 @@ Inline code: make this word inline.
 
 `Format this text as code.`
 
-```
+```python
 def foo():
     if not bar:
         return True
@@ -74,7 +74,7 @@ def foo():
 | 4       |  Green  | Medium |
 | 6       |  Red  | Small |
 
-```
+```python
 def my_function():
     print("Hello from Lily Ots")
 
