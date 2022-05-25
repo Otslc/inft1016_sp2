@@ -79,6 +79,3 @@ def my_function():
     print("Hello from Lily Ots")
 
 ```
-
-    print("Hello from a function")
-```
