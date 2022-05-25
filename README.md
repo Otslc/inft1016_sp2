@@ -36,11 +36,11 @@ Here's an unordered list, with:
 
 Here's an ordered list, with:
 
-- Item one
-- Item two
-- Item three
-  - Item three-A
-  - Item three-B
+1. Item one
+2. Item two
+3. Item three
+  1. Item three-A
+  2. Item three-B
 
 > This is a block quote. It should be in block quotes!
 
