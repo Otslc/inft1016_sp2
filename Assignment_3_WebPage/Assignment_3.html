@@ -8,26 +8,37 @@
             function theme() {
                 document.documentElement.setAttribute('data-theme', 'dark')
                 localStorage.setItem('data-theme', 'dark');
+                //var theme = 'dark';
             }
             function start(){
-                const queryString = window.location.search;
-                //document.write(queryString);
-                const urlParams = new URLSearchParams(queryString);
-                const user_name = urlParams.get('user_name')
-                //document.write(name)
-                localStorage.setItem('user_name', user_name);
+                var queryString = window.location.search; // entire back end of URL
+                var urlParams = new URLSearchParams(queryString); // same as queryString but without '?'
+                var user_name = urlParams.get('user_name') // find value associated with 'user_name'
+                localStorage.setItem('user_name', user_name); // store name in local storage
+                
+                var name = localStorage.getItem('user_name');
+                
+                if (user_name == null){
+                    document.getElementById('h1').innerHTML = 'Header';
+                }
+                else{
+                    document.getElementById('h1').innerHTML = 'Hello '+user_name;
+                }
+                
+                //not working
                 const query = window.location.localStorage;
-                const name = localStorage.getItem('user-name');
-                if (user_name = 'lily'){
-                    
-                    document.write('hi');
+                const theme = query.get('data-theme')
+                //const theme = localStorage.getItem('data-theme');
+                localStorage.setItem('data-theme', theme);
+                if ('data-theme' == 'dark'){
+                    document.documentElement.setAttribute('data-theme', 'dark');
                 }
             }
         </script>
     </head>
     <body onload="start()">
         <header>
-            <h1>Header</h1>
+            <h1 id="h1">Header</h1>
             <button onclick="theme()">Toggle Theme</button>
         </header>
         <nav>
