@@ -15,5 +15,9 @@
     --font-color: rgb(147, 196, 189);
     --heading-color: rgb(149, 196, 147);
 }
-  
-header, body {background-color: var(--bg-color);}
+
+h1 {color: var(--primary-color);}
+li {color: var(--secondary-color);}
+html {background-color: var(--bg-color);}
+p {color: var(--font-color);}
+header {color: var(--heading-color);}

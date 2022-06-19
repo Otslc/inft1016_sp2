@@ -5,25 +5,30 @@
         <title>My page title</title>
         <link rel="stylesheet" href="base.css">
         <script>
-            function countClicks() {
+            function theme() {
                 document.documentElement.setAttribute('data-theme', 'dark')
                 localStorage.setItem('data-theme', 'dark');
             }
-            function idk(){
+            function start(){
                 const queryString = window.location.search;
                 //document.write(queryString);
                 const urlParams = new URLSearchParams(queryString);
                 const user_name = urlParams.get('user_name')
                 //document.write(name)
-                localStorage.setItem('user', user_name);
+                localStorage.setItem('user_name', user_name);
                 const query = window.location.localStorage;
+                const name = localStorage.getItem('user-name');
+                if (user_name = 'lily'){
+                    
+                    document.write('hi');
+                }
             }
         </script>
     </head>
-    <body onload="idk()">
+    <body onload="start()">
         <header>
             <h1>Header</h1>
-            <button onclick="countClicks()">Toggle Theme</button>
+            <button onclick="theme()">Toggle Theme</button>
         </header>
         <nav>
             <ul>
