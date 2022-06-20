@@ -40,12 +40,37 @@
                     document.documentElement.setAttribute('data-theme', ''); // set data-theme to ''
                 }
             }
+            function photo (num){
+                if (num == 'one'){
+                    document.getElementById('bird').src='http://www.outgrabe.net/bird00.jpg';
+                    document.getElementById('text').innerHTML = 'Pardalote by fir0002 (CC-by-NC)';
+                }
+                if (num == 'two'){
+                    document.getElementById('bird').src='http://www.outgrabe.net/bird01.jpg';
+                    document.getElementById('text').innerHTML = 'Purple swamp hen by Toby Hudson (CC-by-SA)';
+                }
+                if (num == 'three'){
+                    document.getElementById('bird').src='http://www.outgrabe.net/bird02.jpg';
+                    document.getElementById('text').innerHTML = 'White-headed Stilt by JJ Harrison (CC-by-SA)';
+                }
+                if (num == 'four'){
+                    document.getElementById('bird').src='http://www.outgrabe.net/bird03.jpg';
+                    document.getElementById('text').innerHTML = 'Inland Thornbill by Peter Jacobs (CC-by-SA)';
+                }
+                if (num == 'five'){
+                    document.getElementById('bird').src='http://www.outgrabe.net/bird04.jpg';
+                    document.getElementById('text').innerHTML = 'Rose Robin by JJ Harrison (CC-by-SA)';
+                }
+            }
         </script>
     </head>
     <body onload="start()">
         <header>
             <h1 id="h1">Hi</h1>
             <button onclick="theme()">Toggle Theme</button>
+            <div id="wrapper">
+                <div id="banner"></div>
+            </div>
         </header>
         <nav>
             <ul>
@@ -60,7 +85,16 @@
             </form>
         </nav>
         <main>
+            <img id='bird' src='http://www.outgrabe.net/bird00.jpg'>
+            <p id='text'>Pardalote by fir0002 (CC-by-NC)</p>
+            <button onclick="photo('one')">Pardalote</button>
+            <button onclick="photo('two')">Purple Swamp Hen</button>
+            <button onclick="photo('three')">White-headed Stilt</button>
+            <button onclick="photo('four')">Inland Thornbill</button>
+            <button onclick="photo('five')">Rose Robin</button>
             <article>
+                <!--<div id="list"><p><iframe src="Assignment_2.html" frameborder=0 ></iframe></p></div>
+                <object data="Assignment_2.html"></object>-->
                 <h2>Article heading</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.</p>
                 <h3>Subsection</h3>

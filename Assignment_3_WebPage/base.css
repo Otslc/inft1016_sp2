@@ -1,23 +1,39 @@
 
 :root {
     --primary-color: rgb(255, 255, 255);
-    --secondary-color: rgb(147, 57, 132);
-    --bg-color: rgb(194, 144, 232);
-    --font-color: rgb(153, 45, 132);
-    --heading-color: rgb(156, 44, 212);
-
+    --secondary-color: rgb(148, 33, 142);
+    --bg-color: rgb(240, 240, 240);
+    --font-color: rgb(89, 13, 107);
+    --heading-color: rgb(212, 44, 181);
+    --opposite-color: rgb(20, 20, 20);
 }
 
 [data-theme="dark"] {
-    --primary-color: rgb(0, 0, 0);
-    --secondary-color: rgb(64, 181, 202);
-    --bg-color: rgb(45, 107, 69);
-    --font-color: rgb(147, 196, 189);
-    --heading-color: rgb(149, 196, 147);
+    --primary-color: rgb(20, 20, 20);
+    --secondary-color: rgb(71, 200, 222);
+    --bg-color: rgb(20, 20, 20);
+    --font-color: rgb(45, 204, 130);
+    --heading-color: rgb(95, 124, 240);
+    --opposite-color: rgb(240, 240, 240);
 }
 
 h1 {color: var(--primary-color);}
 li, a {color: var(--secondary-color);}
-html {background-color: var(--bg-color);}
+html {background-color: var(--bg-color);
+    padding-left: 2em;
+    padding-right: 2em;
+    border: 2em solid var(--opposite-color);
+}
 p {color: var(--font-color);}
-header {color: var(--heading-color);}
+main {color: var(--heading-color);}
+
+img {height: 100px}
+
+h1{  
+    text-align: center;
+    padding-left: 2em;
+    padding-right: 2em;
+    border: 2px solid var(--opposite-color);
+    width: auto;
+    background-color: var(--secondary-color);
+}
