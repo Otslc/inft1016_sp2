@@ -1,23 +1,23 @@
 
 :root {
     --primary-color: rgb(255, 255, 255);
-    --secondary-color: rgb(232, 144, 217);
+    --secondary-color: rgb(147, 57, 132);
     --bg-color: rgb(194, 144, 232);
-    --font-color: rgb(194, 58, 167);
+    --font-color: rgb(153, 45, 132);
     --heading-color: rgb(156, 44, 212);
 
 }
 
 [data-theme="dark"] {
     --primary-color: rgb(0, 0, 0);
-    --secondary-color: rgb(38, 121, 135);
+    --secondary-color: rgb(64, 181, 202);
     --bg-color: rgb(45, 107, 69);
     --font-color: rgb(147, 196, 189);
     --heading-color: rgb(149, 196, 147);
 }
 
 h1 {color: var(--primary-color);}
-li {color: var(--secondary-color);}
+li, a {color: var(--secondary-color);}
 html {background-color: var(--bg-color);}
 p {color: var(--font-color);}
 header {color: var(--heading-color);}

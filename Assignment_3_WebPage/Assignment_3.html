@@ -6,39 +6,45 @@
         <link rel="stylesheet" href="base.css">
         <script>
             function theme() {
-                document.documentElement.setAttribute('data-theme', 'dark')
-                localStorage.setItem('data-theme', 'dark');
-                //var theme = 'dark';
+                if (JSON.parse(localStorage.getItem('data-theme')) == null){ // if data-theme is set to null in local storage
+                    document.documentElement.setAttribute('data-theme', 'dark'); // set data-theme to dark
+                    localStorage.setItem('data-theme', JSON.stringify('dark')); // assign data-theme the value of dark in local storage
+                }
+                else{ // if data-theme is not set to null in local storage
+                    document.documentElement.setAttribute('data-theme', ''); // set data-theme to ''
+                    localStorage.setItem('data-theme', null); // assign data-theme the value of null in local storage
+                }
             }
             function start(){
-                var queryString = window.location.search; // entire back end of URL
-                var urlParams = new URLSearchParams(queryString); // same as queryString but without '?'
-                var user_name = urlParams.get('user_name') // find value associated with 'user_name'
-                localStorage.setItem('user_name', user_name); // store name in local storage
+                const queryString = window.location.search; // entire back end of URL
+                const urlParams = new URLSearchParams(queryString); // same as queryString but without '?'
+                const user_name = urlParams.get('user_name') // find value associated with 'user_name'
                 
-                var name = localStorage.getItem('user_name');
-                
-                if (user_name == null){
-                    document.getElementById('h1').innerHTML = 'Header';
+                if (user_name == null){ // if no name is stored in the query string
+                    if (localStorage.getItem('user_name') == null){ // if no name is stored in the browser's storage
+                        document.getElementById('h1').innerHTML = 'Header'; // display 'Header'
+                    }
+                    else{ // if there is a name stored in browser storage
+                        document.getElementById('h1').innerHTML = 'Hello '+localStorage.getItem('user_name'); // display 'Hello *name*'
+                    }
                 }
-                else{
-                    document.getElementById('h1').innerHTML = 'Hello '+user_name;
+                else{ // if there is a name stored in the query string
+                    localStorage.setItem('user_name', user_name); // store name in local storage
+                    document.getElementById('h1').innerHTML = 'Hello '+user_name; // display 'Hello *name*'
                 }
-                
-                //not working
-                const query = window.location.localStorage;
-                const theme = query.get('data-theme')
-                //const theme = localStorage.getItem('data-theme');
-                localStorage.setItem('data-theme', theme);
-                if ('data-theme' == 'dark'){
-                    document.documentElement.setAttribute('data-theme', 'dark');
+
+                if (JSON.parse(localStorage.getItem('data-theme')) == 'dark'){ // if data-theme is set to dark in local storage
+                    document.documentElement.setAttribute('data-theme', 'dark'); // set data-theme to dark
+                }
+                else{ // if data-theme is not set to dark in local storage
+                    document.documentElement.setAttribute('data-theme', ''); // set data-theme to ''
                 }
             }
         </script>
     </head>
     <body onload="start()">
         <header>
-            <h1 id="h1">Header</h1>
+            <h1 id="h1">Hi</h1>
             <button onclick="theme()">Toggle Theme</button>
         </header>
         <nav>
