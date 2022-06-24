@@ -22,15 +22,15 @@
                 
                 if (user_name == null){ // if no name is stored in the query string
                     if (localStorage.getItem('user_name') == null){ // if no name is stored in the browser's storage
-                        document.getElementById('h1').innerHTML = 'Hello'; // display 'Header'
+                        document.getElementById('h1').innerHTML = 'Hello!'; // display 'Header'
                     }
                     else{ // if there is a name stored in browser storage
-                        document.getElementById('h1').innerHTML = 'Welcome '+localStorage.getItem('user_name'); // display 'Hello *name*'
+                        document.getElementById('h1').innerHTML = 'Welcome '+localStorage.getItem('user_name')+'!'; // display 'Hello *name*'
                     }
                 }
                 else{ // if there is a name stored in the query string
                     localStorage.setItem('user_name', user_name); // store name in local storage
-                    document.getElementById('h1').innerHTML = 'Welcome '+user_name; // display 'Hello *name*'
+                    document.getElementById('h1').innerHTML = 'Welcome '+user_name+'!'; // display 'Hello *name*'
                 }
 
                 if (JSON.parse(localStorage.getItem('data-theme')) == 'dark'){ // if data-theme is set to dark in local storage
@@ -158,7 +158,7 @@
             </aside>
         </main>
         <footer>
-            <p>©Copyright 2022 by Lily Ots. All rights reversed.</p>
+            <p>©Copyright 2022 by Lily Ots. All rights reserved.</p>
         </footer>
     </body>
 </html>
