@@ -22,15 +22,15 @@
                 
                 if (user_name == null){ // if no name is stored in the query string
                     if (localStorage.getItem('user_name') == null){ // if no name is stored in the browser's storage
-                        document.getElementById('h1').innerHTML = 'Header'; // display 'Header'
+                        document.getElementById('h1').innerHTML = 'Hello'; // display 'Header'
                     }
                     else{ // if there is a name stored in browser storage
-                        document.getElementById('h1').innerHTML = 'Hello '+localStorage.getItem('user_name'); // display 'Hello *name*'
+                        document.getElementById('h1').innerHTML = 'Welcome '+localStorage.getItem('user_name'); // display 'Hello *name*'
                     }
                 }
                 else{ // if there is a name stored in the query string
                     localStorage.setItem('user_name', user_name); // store name in local storage
-                    document.getElementById('h1').innerHTML = 'Hello '+user_name; // display 'Hello *name*'
+                    document.getElementById('h1').innerHTML = 'Welcome '+user_name; // display 'Hello *name*'
                 }
 
                 if (JSON.parse(localStorage.getItem('data-theme')) == 'dark'){ // if data-theme is set to dark in local storage
@@ -74,10 +74,17 @@
         </header>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Our team</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Technology</a></li>
+                <li><a href="#">Legal Issues</a></li>
+                <ul id='ul2'>
+                    <li><a href='#'>Australia</a></li>
+                    <li><a href='#'>Germany</a></li>
+                    <li><a href='#'>Canada</a></li>
+                </ul>
+                <li><a href='#'>Ethical Debate</a></li>
+                <li><a href='#'>Conclusion</a></li>
+                <il><a href='#'>Related</a></il>
             </ul>
             <form>
                 <input type="text" name="user_name" placeholder="Enter your name!">
@@ -93,30 +100,65 @@
             <button onclick="photo('four')">Inland Thornbill</button>
             <button onclick="photo('five')">Rose Robin</button>
             <article>
-                <!--<div id="list"><p><iframe src="Assignment_2.html" frameborder=0 ></iframe></p></div>
-                <object data="Assignment_2.html"></object>-->
-                <h2>Article heading</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.</p>
-                <h3>Subsection</h3>
-                <p>Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.</p>
-                <p>Pelientesque auctor nisi id magna consequat sagittis. Curabitur dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.</p>
-                <h3>Another subsection</h3>
-                <p>Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum soclis natoque penatibus et manis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
-                <p>Vivamus fermentum semper porta. Nunc diam velit, adipscing ut tristique vitae sagittis vel odio. Maecenas convallis ullamcorper ultricied. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, is fringille sem nunc vet mi.</p>
+                <hr>
+                <h2>Self-Driving Cars</h2>
+                    <p>Self-driving cars already exist, and humans share roads and freeways with them. They are one of the most technologically advanced innovations created by humans to date. Only recently has this conversation piece shown signs of becoming a reality. With the advance of technology moving forward at an unprecedented pace, autonomous vehicles are beginning to be readily made available.
+                    However, currently, self-driving cars aren't considered to be completely self-driving. Tesla's, for example, can drive themselves but can still make errors so they require constant driver supervision. </p>
+                    <p>There are several advantages to the use of self-driving vehicles with the major advantage being road safety. Self-driving cars can't get distracted or make careless mistakes, as is the cause of 9 out of 10 crashes (Young, 2020). While self-driving cars can't prevent all accidents, this advantage combined with many others, including, fuel efficiency and eased road congestion, present self-driving cars as a great addition to our roads.</p>
+                    <p>During this report will provide a history on autonomous vehicles, their commercial uses and current progress, as well as the legal and ethical viewpoints of integrating them with society in its current form.</p>
+                <hr>
+                <h3>History</h3>
+                    <p>Self-Driving cars seem to have only recently gained traction in society; however, the history of autonomous vehicles begins as early as the 1500s. Leonardo Da Vinci developed what is considered the first autonomous vehicle; a cart that moved on its own with the use of springs under tension along a predetermined path.</p>
+                    <p>After this, the development of autonomous vehicles didn't catch on again until 1925 when Francis Houdina demonstrated a driverless car in Manhattan, controlled via radio signal. Twice during this experiment, he lost control of the vehicle which resulted in collisions with other motorists (n.a, 2021).
+                    In 1939, at the New York World Fair, Norman Bel Geddes displayed a car he developed with General Motors in an Exhibit titled “Futurama”. This self-driving car used electric currents to steer and magnetics to guide the vehicle along its route (Gringer, 2020).
+                    In 1990, researchers at Carnegie University in Pennsylvania designed and implemented a self-driving van dubbed the “NavLab 5”. It managed to drive a total distance of 4501.3 kilometres under self-guidance. Human passengers were required to manage speed and braking, however. The experiment was designed to provide a low-cost way to design an autonomous vehicle (Togyer, 2015). </p>
+                    <p>Research into self-driving technology has only really progressed since the turn of the century. US defence departments held challenges in the early 2000s to promote the development of this technology.
+                    Mines across the globe have also started implementing autonomous mining trucks, as it has been proven to be more efficient (Zhang et al., 2021). </p>
+                    <p>Big car companies, like Ford and Mercedes, as well as passenger organisations, such as Uber, also began investigating the use of autonomous systems in their vehicles. For the most part, this has proved to be too costly and unlikely to succeed in our current time, so many have pulled out.</p>
+                <hr>
+                <h3>Technology</h3>
+                    <p>The current self-driving technologies are split into 5 levels, from the vehicle having one driver assist feature, to the vehicle always operating with full autonomy. Currently the most advanced self-driving technology available is SAE level 2 self-driving vehicles, which means a human driver is still required behind the wheel watching the road and ready to take control (Meier, 2022).
+                    There are currently many applications of level 2 self-driving systems across different car companies, such as Tesla, Mercedes-Benz, and BMW. Any application that exceeds SAE level 3 self-driving technology are still in development and it are not yet available. </p>
+                    <p>Currently, the most advanced self-driving technology is the Waymo Taxi experiment in some US states. The company provides rides in an automated taxi around the centre of the specific area or state. The taxis were reported to have a couple of confusions and errors during the rides but overall function exceptionally (IQS Directory, 2020).
+                    A competitor for Waymo is General Motor, which have their own taxi model, GM's Cruise AV models, which have no in-built steering wheel, pedals, or other manual controls. The model is in the testing stage in San Francisco, which reportedly still has some errors. </p>
+                    <p>A fully autonomous car is achieved through the implementation of different sensors in various areas of the car which detect the distance between the vehicle and other objects, and video cameras to detect signs and traffic lights. That information is then fed into the system to be processed based on the set algorithm and the vehicle acts accordingly without any human interaction (Synopsys 2022).</p>
+                <hr>
+                <h3>Legal Issues</h3>
+                    <p>Legal regulation of autonomous cars is a complicated area of study. The major advantage is a considerably safer driving environment. Unfortunately, accidents, will always be a part of motor vehicle travel, so it must be determined who will be held accountable in such circumstances (Ilková et al., 2017).
+                    Even though self-driving cars are not yet widely deployed, Australia, Canada, China, Germany, New Zealand, the United Kingdom, and the United States have begun government-level discussions about them. </p>
+                <h4>Australia</h4>
+                    <p class="p2">In Australia, the National Transport Commission (NTC) are trying to develop an end-to-end regulatory structure that will enable the safe and commercial deployment of autonomous cars in Australia. The NTC is evaluating alternatives and concerns related to modifying driving regulations to accommodate autonomous cars as part of that endeavour (National Transport Commission, 2021).</p>
+                <h4>Germany</h4>
+                    <p class="p2">In Germany, the German federal government welcomes new advancements in the sphere of self-driving cars. Its goal is to improve Germany's economic standing in this industry. Germany has set the objective of remaining the "top provider for automated and connected cars" and becoming the "lead market" in its "Strategy for Automated and Connected Driving,". The deployment of self-driving cars onto public roads will be aided, in part, by changing the legal landscape (Juhász, 2019).</p>
+                <h4>Canada</h4>
+                    <p class="p2">Canada, autonomous cars are regulated at three levels of government: federal, provincial, territorial, and municipal. Most of the regulatory work is currently centred at the federal level, the provinces of British Columbia, Ontario, and Quebec, and a few municipalities. Overall, the Canadian government is hopeful about the future of autonomous transportation while simultaneously exercising caution to assure its safe and widespread adoption (Leci et al., 2021).</p>
+                <hr>
+                <h3>Ethical Debate</h3>
+                    <p>Based solely on the advantages, self-driving cars will undoubtedly help improve society and reduce the number of road deaths. Unfortunately, accidents can and will still occur, even when all the cars on the road are autonomous (Young, 2020). Any number of unpredictable events could arise, and self-driving cars will need to be programmed to handle them. </p>
+                    <p>Drivers must often make split second decisions, including when having an accident. A human driver often only has time to react to their surroundings, so whichever way they react is just a reaction with no hidden malice or forethought. Hence, they can't be blamed for ethically unjust actions. On the other hand, autonomous cars have the processing power and are pre-programmed to make purposeful decisions which inevitably impact people's lives. This programming will need to be determined well in advance by policy makers and programmers. They determine what ethical principles to rely on and the order of importance in cases where the principles clash, but even then, there will be many morally grey areas (Lau, 2020). </p>
+                    <p>This issue can be equated to the trolley problem. The trolley problem is an ethical thought experiment about a fictional scenario where an onlooker can save 5 people from getting killed by a trolley if they divert it and kill 1 person (Panahi, 2016). They could minimise harm by saving the 5 people or avoid intervention by saving the 1 person. </p>
+                    <p>The programmers who design the algorithm for self-driving cars will need to figuratively decide which path the trolley takes. It could be that random human reactions are more ethical than predetermined decisions which have been designed to be as moral as possible. </p>
+                    <p>Even with all the ethically grey areas, the idea of self-driving cars shouldn’t simply be dismissed. If the ethics can be worked out, then they will undeniably improve our society.</p>
+                <hr>
+                <h3>Conclusion</h3>
+                    <p>This brings forth many questions for society, and the impact this technology will have. Is the technology reliable enough to use safely? Is artificial intelligence at a point where we can entrust it with the lives of human beings? </p>
+                    <p>The concepts of self-driving and autonomous technology are rapidly starting to see actualising, and soon may be considered commonplace. Laws regarding the development of autonomous technology and its uses will begin to be implemented, creating openings for the world to change and society to automate many of the functions and tasks necessary to support it. </p>
+                    <p>Self-driving vehicles may yet have a long way to go before societies become accepting of and trust the technology behind it. Human error is seen as inevitable and a part of daily life, but society’s standards for machines and technology indicate that nothing less than perfection will be tolerated, leaving autonomous vehicles with an uncertain future, despite the benefits they would bring.</p>
+                <hr>
             </article>
             <aside>
-                <h2>Related</h2>
+                <h3>Related</h3>
                 <ul>
-                    <li><a href="#">Oh I do like to be beside the seaside</a></li>
-                    <li><a href="#">Oh I do like to be beside the sea</a></li>
-                    <li><a href="#">Although in the North of England</a></li>
-                    <li><a href="#">It never stops raining</a></li>
-                    <li><a href="#">Oh well...</a></li>
+                    <li><a href="https://www.iqsdirectory.com/resources/self-driving-cars-are-coming-to-road-near-you-just-not-your-driveway-yet/">Self-Driving Cars Are Coming to a Road Near You, Just Not Your Driveway. Yet.</a></li>
+                    <li><a href="https://www.tomorrowsworldtoday.com/2021/08/09/history-of-autonomous-cars/">History of the Autonomous Car.</a></li>
+                    <li><a href="https://towardsdatascience.com/the-ethics-of-self-driving-cars-efaaaaf9e320">The Ethics of Self-Driving Cars.</a></li>
+                    <li><a href="https://www.ntc.gov.au/sites/default/files/assets/files/2021-06-22%20NTC%20Policy%20Paper%20-%20A%20national%20in-service%20safety%20law%20for%20automated%20vehicles.pdf">A national in-service safety law for automated vehicles.</a></li>
+                    <li><a href="https://www.synopsys.com/automotive/what-is-autonomous-car.html">What is an Autonomous Car? - How Self-Driving Cars Work</a></li>
                 </ul>
             </aside>
         </main>
         <footer>
-            <p>©Copyright 2050 by nobody. All rights reversed.</p>
+            <p>©Copyright 2022 by Lily Ots. All rights reversed.</p>
         </footer>
     </body>
 </html>

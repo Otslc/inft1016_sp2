@@ -1,7 +1,7 @@
 
 :root {
     --primary-color: rgb(255, 255, 255);
-    --secondary-color: rgb(148, 33, 142);
+    --secondary-color: rgb(186, 47, 179);
     --bg-color: rgb(240, 240, 240);
     --font-color: rgb(89, 13, 107);
     --heading-color: rgb(212, 44, 181);
@@ -9,31 +9,84 @@
 }
 
 [data-theme="dark"] {
-    --primary-color: rgb(20, 20, 20);
-    --secondary-color: rgb(71, 200, 222);
+    --primary-color: rgb(0, 0, 0);
+    --secondary-color: rgb(48, 172, 194);
     --bg-color: rgb(20, 20, 20);
     --font-color: rgb(45, 204, 130);
     --heading-color: rgb(95, 124, 240);
     --opposite-color: rgb(240, 240, 240);
 }
-
-h1 {color: var(--primary-color);}
-li, a {color: var(--secondary-color);}
 html {background-color: var(--bg-color);
-    padding-left: 2em;
-    padding-right: 2em;
-    border: 2em solid var(--opposite-color);
+    font-family: Georgia;
+    font-size: small;
 }
-p {color: var(--font-color);}
-main {color: var(--heading-color);}
+
+body {
+    padding: 0em;
+    margin: 0em;
+}
+
+header {
+    color: var(--primary-color);
+    font-size: xx-small;
+}
+
+nav {padding-bottom: 1em;}
+
+header, nav {
+    background-color: var(--secondary-color);
+    padding-top: 1px;
+    padding-left: 3%;
+}
+
+#ul2 {padding-inline-start: 1%;}
+
+li {padding-bottom: 2px;}
+
+ul {width: auto;
+    list-style-type: none;
+    font-size: medium;
+    padding-inline-start: 0%;
+    color: var(--primary-color)
+}
+
+button {
+    background-color: var(--opposite-color);
+    color: var(--primary-color);
+    font-weight: bold;
+}
 
 img {height: 100px}
 
-h1{  
-    text-align: center;
-    padding-left: 2em;
-    padding-right: 2em;
-    border: 2px solid var(--opposite-color);
-    width: auto;
-    background-color: var(--secondary-color);
+main {
+    color: var(--heading-color);
+    padding-top: 2em;
+    padding-left: 7%;
+    padding-right: 7%;
 }
+
+article {
+    font-size: medium;
+    text-align: justify;
+}
+
+h2 {font-size:xx-large;}
+
+a {color: var(--opposite-color);}
+
+article p, .p2 {color: var(--font-color);
+    margin-bottom: 5px;
+    margin-top: 0px;
+}
+
+.p2 {padding-left: 2%;}
+
+h4 {padding-left: 2%;}
+
+h3, h4 {
+    margin-top: 30px;
+    margin-bottom: 7px;
+}
+
+
+footer{padding-left: 7%;}
